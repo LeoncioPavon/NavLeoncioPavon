@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ni.edu.uca.navleonciopavon.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_inssFragment"
+            app:destination="@id/inssFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ni.edu.uca.navleonciopavon.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/inssFragment"
+        android:name="ni.edu.uca.navleonciopavon.InssFragment"
+        android:label="fragment_inss"
+        tools:layout="@layout/fragment_inss" >
+        <action
+            android:id="@+id/action_inssFragment_to_notasFragment"
+            app:destination="@id/notasFragment" />
+        <action
+            android:id="@+id/action_inssFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/notasFragment"
+        android:name="ni.edu.uca.navleonciopavon.NotasFragment"
+        android:label="fragment_notas"
+        tools:layout="@layout/fragment_notas" >
+        <action
+            android:id="@+id/action_notasFragment_to_becaFragment"
+            app:destination="@id/becaFragment" />
+        <action
+            android:id="@+id/action_notasFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/becaFragment"
+        android:name="ni.edu.uca.navleonciopavon.BecaFragment"
+        android:label="fragment_beca"
+        tools:layout="@layout/fragment_beca" >
+        <action
+            android:id="@+id/action_becaFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
